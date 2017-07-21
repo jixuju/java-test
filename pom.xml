@@ -12,6 +12,7 @@
 
     <modules>
         <module>test1-encrypt</module>
+        <module>test2-ratelimit</module>
     </modules>
 
     <properties>
