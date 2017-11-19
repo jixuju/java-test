@@ -13,6 +13,10 @@
     <modules>
         <module>test1-encrypt</module>
         <module>test2-ratelimit</module>
+        <module>test3-jdk8features</module>
+        <module>test4-translate</module>
+        <!--<module>test5-http</module>-->
+        <module>test6-distributedid</module>
     </modules>
 
     <properties>
