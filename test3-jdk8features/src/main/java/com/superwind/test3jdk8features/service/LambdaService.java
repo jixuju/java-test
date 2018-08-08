@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import static java.lang.Math.sqrt;
+
 /**
  * Created by jiangxj on 2017/8/12.
  */
@@ -16,9 +18,15 @@ public class LambdaService {
                 return sqrt(a * 100);
             }
         };
+        System.out.println(formula.calculate(100));
+        System.out.println(formula.sqrt(16));
+    }
 
-        formula.calculate(100);
-        formula.sqrt(16);
+    public void testFunctional() {
+        Formula formula = a ->sqrt(a*100);
+
+        System.out.println(formula.calculate(100));
+        System.out.println(formula.sqrt(16));
     }
 
     public void testLambda() {
@@ -30,11 +38,13 @@ public class LambdaService {
             }
         });
 
-        Collections.sort(names, (String a, String b)->{return b.compareTo(a);});
+        Collections.sort(names, (a, b)->{return b.compareTo(a);});
     }
 
     public static void main(String[] args) {
         LambdaService lambdaService = new LambdaService();
         lambdaService.testLambda();
+        lambdaService.testDefault();
+        lambdaService.testFunctional();
     }
 }
